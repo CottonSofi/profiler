@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and local runtime state
+*.log
+output/
+state/
+
+# Secrets and local settings
+.env
+.env.*
+cookies/
+cookies/*.txt
+cookies/*.json
+profiler_config.json
+profiles.json
