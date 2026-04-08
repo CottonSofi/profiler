@@ -2,6 +2,37 @@
 
 Aplicacion de escritorio para monitorear actividad de cuentas de X, mostrar alertas y descargar media segun el modo configurado.
 
+## Guia de instalacion
+
+### Requisitos
+
+- Windows 10/11
+- Python 3.10+
+- Google Chrome instalado
+- Dependencias de `requirements.txt`
+
+### Instalacion recomendada
+
+Desde la raiz del proyecto:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+### Ejecucion
+
+```powershell
+python profiler\app.py
+```
+
+### Inicio con Windows
+
+La opcion global de inicio usa `pythonw.exe` cuando esta disponible para evitar abrir consola.
+Si cambias de equipo o de entorno virtual, vuelve a guardar la configuracion global.
+
 ## Funciones actuales
 
 - Multi-perfil por UID.
@@ -67,3 +98,14 @@ Con venv:
 .\.venv\Scripts\Activate.ps1
 python profiler/app.py
 ```
+
+## Dependencias comunes
+
+- `playwright`
+- `gallery-dl`
+- `yt-dlp`
+- `screeninfo`
+- `Pillow`
+- `python-vlc` si usas la vista previa de video
+
+Si falta una dependencia, la recomendacion es instalarla dentro de la misma `.venv` activa con `python -m pip install -r requirements.txt`.
